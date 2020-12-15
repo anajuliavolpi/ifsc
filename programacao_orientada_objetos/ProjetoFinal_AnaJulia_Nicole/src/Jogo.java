@@ -1,10 +1,10 @@
+
 public class Jogo {
 	
 	private Tabuleiro tabuleiro;
 	boolean terminar = false;
 	boolean ganhar = false;
 	int[] jogada;
-//	int rodada=0;
 
 	public Jogo(){
 		tabuleiro = new Tabuleiro();
@@ -13,13 +13,13 @@ public class Jogo {
 	}
 
 	public void Jogar(Tabuleiro tabuleiro){
+		
 		do{
-//			rodada++;
-//			System.out.println("Rodada " + rodada);
-			tabuleiro.mostrarCampo();
-			terminar = tabuleiro.setPosicao();
+			
+			tabuleiro.mostrarTabuleiro();
+			terminar = tabuleiro.setPosicao(); //PERDEU: diz se a posicao tem -1 que é quando o jogo acaba
 
-			if(!terminar){
+			if(!terminar){ // if FALSE 
 				tabuleiro.abrirVizinhas();
 				terminar = tabuleiro.ganharJogo();
 			}
