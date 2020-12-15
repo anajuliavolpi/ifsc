@@ -1,0 +1,138 @@
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Imprimir Livros
+  3 - Remover livro (por posição)
+  0 - Sair
+------------------------------------
+Digite opção:
+2
+-------- Listagem de Livros --------
+
+Não há livros cadastrados!
+
+------------------------------------
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Imprimir Livros
+  3 - Remover livro (por posição)
+  0 - Sair
+------------------------------------
+Digite opção:
+3
+
+Não há livros cadastrados!
+
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Imprimir Livros
+  3 - Remover livro (por posição)
+  0 - Sair
+------------------------------------
+Digite opção:
+1
+------Adicionando Livro------
+Digite título:
+Titulo 1
+Digite Autor:
+Autor 1
+Digite o Resumo:
+Resumo 1
+Digite Num Paginas:
+10
+Digite as Palavras-Chave:
+Palavra Chave1
+Deseja adicionar um nova palavra-chave?
+  0 - Nao
+  1 - Sim
+1
+Palavra Chave2
+Deseja adicionar um nova palavra-chave?
+  0 - Nao
+  1 - Sim
+0
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Imprimir Livros
+  3 - Remover livro (por posição)
+  0 - Sair
+------------------------------------
+Digite opção:
+1
+------Adicionando Livro------
+Digite título:
+Titulo 2
+Digite Autor:
+Autor 2
+Digite o Resumo:
+Resumo 2
+Digite Num Paginas:
+30
+Digite as Palavras-Chave:
+Palavra Chave3
+Deseja adicionar um nova palavra-chave?
+  0 - Nao
+  1 - Sim
+0
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Imprimir Livros
+  3 - Remover livro (por posição)
+  0 - Sair
+------------------------------------
+Digite opção:
+2
+-------- Listagem de Livros --------
+
+Posição: 1
+Título: Titulo 1
+Autor: Autor 1
+Resumo: Resumo 1
+Num. Páginas: 10
+Palavras-Chave:
+Palavra Chave1; Palavra Chave2; 
+
+Posição: 2
+Título: Titulo 2
+Autor: Autor 2
+Resumo: Resumo 2
+Num. Páginas: 30
+Palavras-Chave:
+Palavra Chave3; 
+------------------------------------
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Imprimir Livros
+  3 - Remover livro (por posição)
+  0 - Sair
+------------------------------------
+Digite opção:
+3
+Digite a posição do livro: 
+1
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Imprimir Livros
+  3 - Remover livro (por posição)
+  0 - Sair
+------------------------------------
+Digite opção:
+2
+-------- Listagem de Livros --------
+
+Posição: 1
+Título: Titulo 2
+Autor: Autor 2
+Resumo: Resumo 2
+Num. Páginas: 30
+Palavras-Chave:
+Palavra Chave3; 
+------------------------------------
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Imprimir Livros
+  3 - Remover livro (por posição)
+  0 - Sair
+------------------------------------
+Digite opção:
+0
+Finalizando o sistema

@@ -1,0 +1,180 @@
+---------------MENU-----------------
+  1 - Adicionar Publicação
+  2 - Listar Acervo
+  3 - Imprimir Publicação
+  0 - Sair
+------------------------------------
+Digite opção:
+2
+
+Não há publicações cadastradas!
+
+---------------MENU-----------------
+  1 - Adicionar Publicação
+  2 - Listar Acervo
+  3 - Imprimir Publicação
+  0 - Sair
+------------------------------------
+Digite opção:
+3
+
+Não há publicações cadastradas!
+
+---------------MENU-----------------
+  1 - Adicionar Publicação
+  2 - Listar Acervo
+  3 - Imprimir Publicação
+  0 - Sair
+------------------------------------
+Digite opção:
+1
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Adicionar Artigo
+------------------------------------
+Digite opção:
+1
+------Adicionando Livro------
+Digite título:
+titulo livro
+Digite Autor:
+autor 1
+Ano:
+2019
+Digite as informações dos capítulos:
+Título do capítulo: 
+primeiro capitulo
+Texto do capítulo: 
+texto primeiro capitulo
+Deseja adicionar um novo capítulo?
+  0 - Nao
+  1 - Sim
+1
+Título do capítulo: 
+segundo capitulo
+Texto do capítulo: 
+texto segundo capitulo
+Deseja adicionar um novo capítulo?
+  0 - Nao
+  1 - Sim
+0
+---------------MENU-----------------
+  1 - Adicionar Publicação
+  2 - Listar Acervo
+  3 - Imprimir Publicação
+  0 - Sair
+------------------------------------
+Digite opção:
+1
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Adicionar Artigo
+------------------------------------
+Digite opção:
+2
+------Adicionando Artigo------
+Digite título:
+artigo 1
+Digite Autor:
+autor 2
+Ano:
+2000
+Digite as informações das seções:
+Título da seção: 
+primeira secao
+Texto da seção: 
+texto primeira secao
+Deseja adicionar uma nova seção?
+  0 - Nao
+  1 - Sim
+0
+---------------MENU-----------------
+  1 - Adicionar Publicação
+  2 - Listar Acervo
+  3 - Imprimir Publicação
+  0 - Sair
+------------------------------------
+Digite opção:
+1
+---------------MENU-----------------
+  1 - Adicionar Livro
+  2 - Adicionar Artigo
+------------------------------------
+Digite opção:
+1
+------Adicionando Livro------
+Digite título:
+segundo livro
+Digite Autor:
+autor livro 2
+Ano:
+2018
+Digite as informações dos capítulos:
+Título do capítulo: 
+primeiro capitulo livro 2
+Texto do capítulo: 
+texto livro 2
+Deseja adicionar um novo capítulo?
+  0 - Nao
+  1 - Sim
+0
+---------------MENU-----------------
+  1 - Adicionar Publicação
+  2 - Listar Acervo
+  3 - Imprimir Publicação
+  0 - Sair
+------------------------------------
+Digite opção:
+2
+Item 1:
+Livro: titulo livro
+
+Item 2:
+Artigo: artigo 1
+
+Item 3:
+Livro: segundo livro
+
+---------------MENU-----------------
+  1 - Adicionar Publicação
+  2 - Listar Acervo
+  3 - Imprimir Publicação
+  0 - Sair
+------------------------------------
+Digite opção:
+3
+Digite a posição: 
+2
+---- ARTIGO ----
+Título:artigo 1
+Autor: 2000
+Ano: 2000
+Seção 1: primeira secao
+Texto 1: texto primeira secao
+---------------MENU-----------------
+  1 - Adicionar Publicação
+  2 - Listar Acervo
+  3 - Imprimir Publicação
+  0 - Sair
+------------------------------------
+Digite opção:
+3
+Digite a posição do livro: 
+1
+---- LIVRO ----
+Título:titulo livro
+Autor: autor 1
+Ano: 2019
+Capítulo 1: primeiro capitulo
+Texto 1: texto primeiro capitulo
+Capítulo 2: segundo capitulo
+Texto 2: texto segundo capitulo
+---------------MENU-----------------
+  1 - Adicionar Publicação
+  2 - Listar Acervo
+  3 - Imprimir Publicação
+  0 - Sair
+------------------------------------
+Digite opção:
+0
+Finalizando o sistema
