@@ -19,7 +19,7 @@ public class Tabuleiro {
 	}
 
 	public boolean ganharJogo(){
-		
+
 		int count=0;
 		for(int linha = 1 ; linha < 9 ; linha++) {
 			for(int coluna = 1 ; coluna < 9 ; coluna++) {
@@ -35,7 +35,7 @@ public class Tabuleiro {
 			return false;                
 		}
 	}
-	
+
 	public void abrirVizinhas(){
 		for(int i=-1 ; i<2 ; i++) {
 			for(int j=-1 ; j<2 ; j++) {
@@ -63,79 +63,106 @@ public class Tabuleiro {
 			}
 			else if (tabuleiro[linha][coluna] != '#') {
 				System.out.println("Essa posicao ja foi escolhida!");
-			
+
 			}
-			
-			
-//			if( (tabuleiro[linha][coluna] != '#') && ((linha < 9 && linha > 0) && (coluna < 9 && coluna > 0)))
-//                System.out.println("Posicao ja escolhida!");
-//            
-//            if( linha < 1 || linha > 8 || coluna < 1 || coluna > 8)
-//                System.out.println("Posicao Invalida!\nDigite numeros de 0 a 9");
-//            
-			
-			
-			
-			
-//			if((tabuleiro[linha][coluna] != '#') && ((linha < 9 && linha > 0) && (coluna < 9 && coluna > 0)))
-//				System.out.println("Essa posicao ja foi escolhida!");
-//
-//			if(linha < 0 || linha > 7 || coluna < 0 || coluna > 9) {
-//				System.out.println("Posicao Invalida!\nDigite numeros de 0 a 9");
-//			}
-			
+
+
+			//			if( (tabuleiro[linha][coluna] != '#') && ((linha < 9 && linha > 0) && (coluna < 9 && coluna > 0)))
+			//                System.out.println("Posicao ja escolhida!");
+			//            
+			//            if( linha < 1 || linha > 8 || coluna < 1 || coluna > 8)
+			//                System.out.println("Posicao Invalida!\nDigite numeros de 0 a 9");
+			//            
+
+
+
+
+			//			if((tabuleiro[linha][coluna] != '#') && ((linha < 9 && linha > 0) && (coluna < 9 && coluna > 0)))
+			//				System.out.println("Essa posicao ja foi escolhida!");
+			//
+			//			if(linha < 0 || linha > 7 || coluna < 0 || coluna > 9) {
+			//				System.out.println("Posicao Invalida!\nDigite numeros de 0 a 9");
+			//			}
+
 		}while((linha < 1 && linha > 8) && (coluna < 1 && coluna > 8) || (tabuleiro[linha][coluna] != '#'));
-//	}while((linha < 0 && linha > 7) && (coluna < 0 && coluna > 9) || (tabuleiro[linha][coluna] != '#'));
+		//	}while((linha < 0 && linha > 7) && (coluna < 0 && coluna > 9) || (tabuleiro[linha][coluna] != '#'));
 
 		if(getPosicao(linha, coluna) == -1) {
 			return true;
 		} else {
 			return false;
 		}
-		
+
 	}
 
 	public void mostrarTabuleiro(){
-				
-		
-		System.out.print("\n   0 1 2 3 4 5 6 7 8 9"); 
-		System.out.println("\n   -------------------"); 
-		
-	        for(int linha = 0 ; linha < 8 ; linha++){
-				System.out.print(linha + " | ");
 
-	            for(int coluna = 1 ; coluna < 9 ; coluna++){
-					System.out.print(" "+ tabuleiro[linha][coluna]);
-	            }
-	                
-	            System.out.println();
-	        }
-	            
-	       
+
+//		System.out.print("\n   0 1 2 3 4 5 6 7 8 9"); 
+//		System.out.println("\n   -------------------"); 
+//
+//		for(int linha = 0 ; linha < 8 ; linha++){
+//			System.out.print(linha + " | ");
+//
+//			for(int coluna = 1 ; coluna < 9 ; coluna++){
+//				System.out.print(" "+ tabuleiro[linha][coluna]);
+//			}
+//
+//			System.out.println();
+//		}
+
+//		PARTE DO SITE
+//		System.out.println("\n     Linhas");
+//        for(int linha = 8 ; linha > 0 ; linha--){
+//            System.out.print("       "+linha + " ");
+//            
+//            for(int coluna = 1 ; coluna < 9 ; coluna++){
+//                    System.out.print("   "+ tabuleiro[linha][coluna]);
+//            }
+//                
+//            System.out.println();
+//        }
+//            
+//        System.out.println("\n            1   2   3   4   5   6   7   8");
+//        System.out.println("                      Colunas");
+
+
+		System.out.print("\n    1 2 3 4 5 6 7 8"); 
+		System.out.println("\n   ----------------"); 
 		
-		
-		
-		
-/*
+        for(int linha = 1 ; linha < 8 ; linha++){
+        	System.out.print(linha + " |");;
+            
+            for(int coluna = 1 ; coluna < 9 ; coluna++){
+                    System.out.print(" "+ tabuleiro[linha][coluna]);
+            }
+                
+            System.out.println();
+        }
+      
+
+
+
+		/*
 		System.out.print("\n   0 1 2 3 4 5 6 7 8 9"); 
 		System.out.println("\n   -------------------"); 
-		
-		
+
+
 //		for (int linha = 0; linha < 8; linha++){
         for(int linha = 8 ; linha > 0 ; linha--){	
 			System.out.print(linha + " | ");
-			
+
 //			for (int coluna = 0; coluna < 10; coluna++){
 			for (int coluna = 1; coluna < 9; coluna++){
 				System.out.print(" "+ tabuleiro[linha][coluna]);
 			}
 			System.out.println();
 		}
-       */
+		 */
 	}
 
 	public void preencherInformacoesBombasVizinhas(){
-		
+
 		for (int linha=1 ; linha < 9 ; linha++) {
 			for(int coluna=1 ; coluna < 9 ; coluna++){
 
@@ -151,7 +178,7 @@ public class Tabuleiro {
 			}
 		}
 	}
-	
+
 	public void exibirTabuleiro(){
 		for(int i=1 ; i < 9; i++) {
 			for(int j=1 ; j < 9 ; j++) {
@@ -180,7 +207,7 @@ public class Tabuleiro {
 	}
 
 	public void sortearBombas(){
-		
+
 		boolean sorteado;
 		int linha, coluna;
 		for(int i=0 ; i<10 ; i++){
@@ -194,7 +221,7 @@ public class Tabuleiro {
 				} else {
 					sorteado = false;
 				}
-				
+
 			}while(sorteado);
 
 			bombas[linha][coluna] = -1;
