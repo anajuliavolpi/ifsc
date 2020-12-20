@@ -21,18 +21,13 @@ public class Tabuleiro {
 		horaInicial = Calendar.getInstance().getTime();
 		bombas = new int[10][10];
 		tabuleiro = new char[10][10];
-//		iniciarBombas(); // coloca 0 em todas as posições do tabuleiro de bombas
-//		sortearBombas(); // coloca, aleatoriamente, 10 bombas no tabuleiro de bombas
-//		preencherInformacoesBombasVizinhas(); // preenche o tabuleiro de bombas com o número de bombas vizinhas
-//		iniciaTabuleiro(); // inicia o tabuleiro de exibição com _
-
 	}
 
 	public void iniciar(int quantidadeBombas) {
 		iniciarBombas(); // coloca 0 em todas as posições do tabuleiro de bombas
 		sortearBombas(quantidadeBombas); // coloca, aleatoriamente, 10 bombas no tabuleiro de bombas
 		preencherInformacoesBombasVizinhas(); // preenche o tabuleiro de bombas com o número de bombas vizinhas
-		iniciaTabuleiro(); // inicia o tabuleiro de exibição com _
+		iniciaTabuleiro(); // inicia o tabuleiro de exibição com #
 	}
 	
 	public boolean ganharJogo() {
@@ -105,7 +100,6 @@ public class Tabuleiro {
 		      
 		    } catch (IOException e) {
 		    	System.err.printf("\nHistorico Vazio\n");
-//		        System.err.printf("Erro na abertura do historico: %s.\n",e.getMessage());
 		    }		
 	}
 
@@ -145,26 +139,7 @@ public class Tabuleiro {
 				System.out.println("Essa posicao ja foi escolhida!");
 
 			}
-
-			// if( (tabuleiro[linha][coluna] != '#') && ((linha < 9 && linha > 0) && (coluna
-			// < 9 && coluna > 0)))
-			// System.out.println("Posicao ja escolhida!");
-			//
-			// if( linha < 1 || linha > 8 || coluna < 1 || coluna > 8)
-			// System.out.println("Posicao Invalida!\nDigite numeros de 0 a 9");
-			//
-
-			// if((tabuleiro[linha][coluna] != '#') && ((linha < 9 && linha > 0) && (coluna
-			// < 9 && coluna > 0)))
-			// System.out.println("Essa posicao ja foi escolhida!");
-			//
-			// if(linha < 0 || linha > 7 || coluna < 0 || coluna > 9) {
-			// System.out.println("Posicao Invalida!\nDigite numeros de 0 a 9");
-			// }
-
 		} while ((linha < 1 && linha > 8) && (coluna < 1 && coluna > 8) || (tabuleiro[linha][coluna] != '#'));
-		// }while((linha < 0 && linha > 7) && (coluna < 0 && coluna > 9) ||
-		// (tabuleiro[linha][coluna] != '#'));
 
 		if (getPosicao(linha, coluna) == -1) {
 			return true;
@@ -241,13 +216,11 @@ public class Tabuleiro {
 		}
 	}
 
-//	public void sortearBombas() {
 	public void sortearBombas(int quantidadeBombas) {
 
 		boolean sorteado;
 		int linha, coluna;
 		for(int i=0; i < quantidadeBombas; i++){
-//		for (int i = 0; i < 10; i++) {
 
 			do {
 				linha = random.nextInt(8) + 1;
