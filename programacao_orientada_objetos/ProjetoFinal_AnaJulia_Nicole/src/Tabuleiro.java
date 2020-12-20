@@ -21,13 +21,20 @@ public class Tabuleiro {
 		horaInicial = Calendar.getInstance().getTime();
 		bombas = new int[10][10];
 		tabuleiro = new char[10][10];
-		iniciarBombas(); // coloca 0 em todas as posições do tabuleiro de bombas
-		sortearBombas(); // coloca, aleatoriamente, 10 bombas no tabuleiro de bombas
-		preencherInformacoesBombasVizinhas(); // preenche o tabuleiro de bombas com o número de bombas vizinhas
-		iniciaTabuleiro(); // inicia o tabuleiro de exibição com _
+//		iniciarBombas(); // coloca 0 em todas as posições do tabuleiro de bombas
+//		sortearBombas(); // coloca, aleatoriamente, 10 bombas no tabuleiro de bombas
+//		preencherInformacoesBombasVizinhas(); // preenche o tabuleiro de bombas com o número de bombas vizinhas
+//		iniciaTabuleiro(); // inicia o tabuleiro de exibição com _
 
 	}
 
+	public void iniciar(int quantidadeBombas) {
+		iniciarBombas(); // coloca 0 em todas as posições do tabuleiro de bombas
+		sortearBombas(quantidadeBombas); // coloca, aleatoriamente, 10 bombas no tabuleiro de bombas
+		preencherInformacoesBombasVizinhas(); // preenche o tabuleiro de bombas com o número de bombas vizinhas
+		iniciaTabuleiro(); // inicia o tabuleiro de exibição com _
+	}
+	
 	public boolean ganharJogo() {
 
 		int count = 0;
@@ -47,7 +54,7 @@ public class Tabuleiro {
 		}
 	}
 
-	public void salvarHistorico(int resultado) {
+	public void salvarHistorico(int resultado, String nivel) {
 
 		String duracao = "";
 
@@ -64,9 +71,9 @@ public class Tabuleiro {
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
 			
 			if (resultado == 1) {
-				historico.write(simpleDateFormat.format(horaInicial) + " | Nivel Facil | Duracao: " + duracao + " | Ganhou" + "\n");
+				historico.write(simpleDateFormat.format(horaInicial) + " | Nivel " + nivel + " | Duracao: " + duracao + " | Ganhou" + "\n");
 			} else {
-				historico.write(simpleDateFormat.format(horaInicial) + " | Nivel Facil | Duracao: " + duracao + " | Perdeu" + "\n");
+				historico.write(simpleDateFormat.format(horaInicial) + " | Nivel " + nivel + " | Duracao: " + duracao + " | Perdeu" + "\n");
 			}
 			
 			historico.close();
@@ -167,36 +174,12 @@ public class Tabuleiro {
 
 	}
 
-	public void mostrarTabuleiro() {
+	public void mostrarTabuleiro(boolean init, int quantidadeBombas) {
 
-//		System.out.print("\n   0 1 2 3 4 5 6 7 8 9"); 
-//		System.out.println("\n   -------------------"); 
-//
-//		for(int linha = 0 ; linha < 8 ; linha++){
-//			System.out.print(linha + " | ");
-//
-//			for(int coluna = 1 ; coluna < 9 ; coluna++){
-//				System.out.print(" "+ tabuleiro[linha][coluna]);
-//			}
-//
-//			System.out.println();
-//		}
-
-//		PARTE DO SITE
-//		System.out.println("\n     Linhas");
-//        for(int linha = 8 ; linha > 0 ; linha--){
-//            System.out.print("       "+linha + " ");
-//            
-//            for(int coluna = 1 ; coluna < 9 ; coluna++){
-//                    System.out.print("   "+ tabuleiro[linha][coluna]);
-//            }
-//                
-//            System.out.println();
-//        }
-//            
-//        System.out.println("\n            1   2   3   4   5   6   7   8");
-//        System.out.println("                      Colunas");
-
+		if (init) {
+			iniciar(quantidadeBombas);
+		}
+		
 		System.out.print("\n    1 2 3 4 5 6 7 8");
 		System.out.println("\n   ----------------");
 
@@ -209,19 +192,6 @@ public class Tabuleiro {
 
 			System.out.println();
 		}
-
-		/*
-		 * System.out.print("\n   0 1 2 3 4 5 6 7 8 9");
-		 * System.out.println("\n   -------------------");
-		 * 
-		 * 
-		 * // for (int linha = 0; linha < 8; linha++){ for(int linha = 8 ; linha > 0 ;
-		 * linha--){ System.out.print(linha + " | ");
-		 * 
-		 * // for (int coluna = 0; coluna < 10; coluna++){ for (int coluna = 1; coluna <
-		 * 9; coluna++){ System.out.print(" "+ tabuleiro[linha][coluna]); }
-		 * System.out.println(); }
-		 */
 	}
 
 	public void preencherInformacoesBombasVizinhas() {
@@ -252,7 +222,7 @@ public class Tabuleiro {
 				}
 			}
 		}
-		mostrarTabuleiro();
+		mostrarTabuleiro(false, 0);
 	}
 
 	public void iniciaTabuleiro() {
@@ -271,13 +241,13 @@ public class Tabuleiro {
 		}
 	}
 
-	public void sortearBombas() {
-//	public void sortearBombas(int quantidadeBombas) {
+//	public void sortearBombas() {
+	public void sortearBombas(int quantidadeBombas) {
 
 		boolean sorteado;
 		int linha, coluna;
-//		for(int i=0; i < quantidadeBombas; i++){
-		for (int i = 0; i < 10; i++) {
+		for(int i=0; i < quantidadeBombas; i++){
+//		for (int i = 0; i < 10; i++) {
 
 			do {
 				linha = random.nextInt(8) + 1;

@@ -8,105 +8,117 @@ public class Jogo {
 	int[] jogada;
 	Scanner scanner = new Scanner(System.in);
 
-
-	public Jogo(){
+	public Jogo() {
 		tabuleiro = new Tabuleiro();
 		Jogar(tabuleiro);
 		jogada = new int[2];
 	}
 
-//	public void Jogar(Tabuleiro tabuleiro){
-//		
-//		do{
-//			
-//			tabuleiro.mostrarTabuleiro();
-//			terminar = tabuleiro.setPosicao(); //PERDEU: diz se a posicao tem -1 que é quando o jogo acaba
-//
-//			if(!terminar){ // if FALSE 
-//				tabuleiro.abrirVizinhas();
-//				terminar = tabuleiro.ganharJogo();
-//			}
-//
-//		}while(!terminar);
-//
-//		if(!tabuleiro.ganharJogo()){
-//			System.out.println("Voce PERDEU!!");
-//			tabuleiro.exibirTabuleiro();
-//			tabuleiro.salvarHistorico(0);
-//			tabuleiro.lerHistorico();
-////			tabuleiro.limparHistorico();
-//		} else {
-//			System.out.println("Voce GANHOU!");
-//			tabuleiro.exibirTabuleiro();
-//			tabuleiro.salvarHistorico(1);
-//			tabuleiro.lerHistorico();
-////			tabuleiro.limparHistorico();
-//		}		
-//	}	
-	
-	public void Jogar(Tabuleiro tabuleiro){
+	public void Jogar(Tabuleiro tabuleiro) {
 
+		String nivelStr = "";
 		int op = -1;
-//		do{
-		while(!terminar && op != 0) {
+		while (!terminar && op != 0) {
 
-//			int op = -1;
-//			while(op != 0){
-				op = menuPrincipal();
-				switch(op){
+			op = menuPrincipal();
+			switch (op) {
+			case 1:
+
+				int nivel = escolherNivel();
+				switch (nivel) {
 				case 1:
-
-//					int nivel = escolherNivel();
-//					switch(nivel){
-//					case 1:
-
+					nivelStr = "Facil  ";
+					int count = 0;
 					do {
-						tabuleiro.mostrarTabuleiro();
-						terminar = tabuleiro.setPosicao(); //PERDEU: diz se a posicao tem -1 que é quando o jogo acaba
+						if (count == 0) {
+							tabuleiro.mostrarTabuleiro(true, 10);
+							count++;
+						} else {
+							tabuleiro.mostrarTabuleiro(false, 10);
+						}
+						terminar = tabuleiro.setPosicao(); // PERDEU: diz se a posicao tem -1 que é quando o jogo acaba
 
-						if(!terminar){ // if FALSE 
+						if (!terminar) { // if FALSE
 							tabuleiro.abrirVizinhas();
 							terminar = tabuleiro.ganharJogo();
 						}
-					}while(!terminar);				
-					
-						break;
-//					}
+					} while (!terminar);
+					break;
+
 				case 2:
-					tabuleiro.lerHistorico();
-					break;	
+					nivelStr = "Medio  ";
+					int count1 = 0;
+					do {
+						if (count1 == 0) {
+							tabuleiro.mostrarTabuleiro(true, 12);
+							count1++;
+						} else {
+							tabuleiro.mostrarTabuleiro(false, 12);
+						}
+						terminar = tabuleiro.setPosicao();
+
+						if (!terminar) {
+							tabuleiro.abrirVizinhas();
+							terminar = tabuleiro.ganharJogo();
+						}
+					} while (!terminar);
+					break;
+
 				case 3:
-					tabuleiro.limparHistorico();
-					break;
-				case 4:
-					mostrarCreditos();
-					break;
-				case 0:
-					System.out.println("Finalizando o sistema");
-					break;
-				default:
-					System.out.println("Opção inválida");
-					break;
-//				}
-			}
+					nivelStr = "Dificil";
+					int count2 = 0;
+					do {
+						if (count2 == 0) {
+							tabuleiro.mostrarTabuleiro(true, 14);
+							count2++;
+						} else {
+							tabuleiro.mostrarTabuleiro(false, 14);
+						}
+						terminar = tabuleiro.setPosicao();
 
-
-//		}while(!terminar && op != 0);
-		}
+						if (!terminar) {
+							tabuleiro.abrirVizinhas();
+							terminar = tabuleiro.ganharJogo();
+						}
+					} while (!terminar);
+					break;
+				}
+				break;
 				
-		if (op != 0) {	
-			if(!tabuleiro.ganharJogo()){
+			case 2:
+				tabuleiro.lerHistorico();
+				break;
+				
+			case 3:
+				tabuleiro.limparHistorico();
+				break;
+				
+			case 4:
+				mostrarCreditos();
+				break;
+				
+			case 0:
+				System.out.println("Finalizando o sistema");
+				break;
+				
+			default:
+				System.out.println("Opção inválida");
+				break;
+			}
+		}
+
+		if (op != 0) {
+			if (!tabuleiro.ganharJogo()) {
 				System.out.println("\nVoce PERDEU!!\n");
 				tabuleiro.exibirTabuleiro();
-				tabuleiro.salvarHistorico(0);
+				tabuleiro.salvarHistorico(0, nivelStr);
 			} else {
 				System.out.println("\nVoce GANHOU!!\n");
 				tabuleiro.exibirTabuleiro();
-				tabuleiro.salvarHistorico(1);
-			}	
+				tabuleiro.salvarHistorico(1, nivelStr);
+			}
 		}
 	}
-
 
 	private void mostrarCreditos() {
 		System.out.println("\n\n");
@@ -121,9 +133,9 @@ public class Jogo {
 		System.out.println("|                                     |");
 		System.out.println(" -------------------------------------");
 		System.out.println("\n\n");
-}
+	}
 
-	public int menuPrincipal(){
+	public int menuPrincipal() {
 		System.out.println("\n");
 		System.out.println("------------ MENU PRINCIPAL ----------");
 		System.out.println("  1 - Novo Jogo");
@@ -132,19 +144,20 @@ public class Jogo {
 		System.out.println("  4 - Creditos");
 		System.out.println("  0 - Sair");
 		System.out.println("---------------------------------------");
-		System.out.println("Digite a opção:");
+		System.out.print("Digite a opção: ");
 		int op = Integer.parseInt(scanner.nextLine());
 		return op;
 	}
 
-	public int escolherNivel(){
-		System.out.println("------------------------------------");
+	public int escolherNivel() {
+		System.out.println("\n");
+		System.out.println("-------------- NIVEL ---------------");
 		System.out.println("  Escolha o nivel:");
 		System.out.println("  1 - Facil");
 		System.out.println("  2 - Medio");
 		System.out.println("  3 - Dificil");
 		System.out.println("------------------------------------");
-		System.out.println("Digite a opção:");
+		System.out.print("Digite a opção: ");
 		int op = Integer.parseInt(scanner.nextLine());
 		return op;
 	}
