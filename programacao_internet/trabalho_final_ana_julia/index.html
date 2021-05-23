@@ -12,13 +12,16 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 </head>
 
 <body>
 	
 	<header>
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #8bda95">
-			<div class="container">
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #8bda95">			
+			<div class="container">				
 				<!-- <a class="navbar-brand" href="#">IFSC</a> -->
 				<a class="navbar-brand" href="index.thml"><img src="imagens/logo.png" class="logo"></a>
 
@@ -40,17 +43,199 @@
 						<li class="nav-item menu">
 							<a class="nav-link" href="contato.html">Contato</a>
 						</li>	
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main role="main">
+
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="first-slide img-fluid d-block w-100" src="imagens/carrossel1.png" alt="First slide">
+					<div class="container">
+						<div class="carousel-caption text-left">
+							<h1 class="d-none d-md-block">Manchete</h1>
+							<p class="d-none d-md-block">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+						</div>
 					</div>
 				</div>
-			</nav>
-			<header>
+				<div class="carousel-item">
+					<img class="second-slide img-fluid d-block w-100" src="imagens/carrossel2.png" alt="Second slide">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Outra manchete</h1>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img class="third-slide img-fluid d-block w-100" src="imagens/carrossel3.png" alt="Third slide">
+					<div class="container">
+						<div class="carousel-caption text-right">
+							<h1>Outra manchete, pra garantir</h1>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img class="fourth-slide img-fluid d-block w-100" src="imagens/carrossel3.png" alt="Second slide">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Outra manchete</h1>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Voltar</span>
+			</a>
+			<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Avançar</span>
+			</a>
+		</div>
+
+		<div class="jumbotron servicos">
+			<div class="container">
+				<h2 class="display-4 text-center titulo-servico">Serviço</h2>
+				<div class="card-deck">
+					<div class="card text-center">
+						<div class="tamanho-icone">
+							<i class="fas fa-plane"></i>
+						</div>
+
+
+						<div class="card-body">
+							<h5 class="card-title">Servico um</h5>
+							<p class="card-text">Este eh um card mais longo com suporte a texto embaixo</p>
+						</div>
+
+					</div>
+
+					<div class="card text-center">
+						<div class="tamanho-icone">
+							<i class="fas fa-bus"></i>
+						</div>
+
+
+						<div class="card-body">
+							<h5 class="card-title">Servico um</h5>
+							<p class="card-text">Este eh um card mais longo com suporte a texto embaixo</p>
+						</div>
+
+					</div>
+
+
+					<div class="card text-center">
+						<div class="tamanho-icone">
+							<i class="fas fa-train"></i>
+						</div>
+
+
+						<div class="card-body">
+							<h5 class="card-title">Servico um</h5>
+							<p class="card-text">Este eh um card mais longo com suporte a texto embaixo</p>
+						</div>
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
 
 
 
-				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<div class="jumbotron depoimento">
+			<div class="container">
+				<h2 class="display-4 text-center titulo-depoimento">Depoimentos</h2>
 
-			</body>
+				<p class="lead text-center desc-depoimento">Este eh um card mais longo com suporte a texto embaixoEste eh um card mais longo com suporte a texto embaixoEste eh um card mais longo com suporte a texto embaixo</p>
 
-			</html>
+				<div class="card-deck">
+					<div class="card text-center">
+						
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/LXbaRlUNCYs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					</div>
+
+					<div class="card text-center">
+						
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/9A-fs6Bf5Xs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					</div>
+
+
+					<div class="card text-center">
+						
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/2RitfSz2wXM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</main>
+
+
+	<footer class="container-fluid py-5 rodape">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-6 col-md">
+					<h5>IFSC - Instituto Federal</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-rodape" href="#">Home</a></li>
+						<li><a class="link-rodape" href="#">Sobre a empresa</a></li>
+						<li><a class="link-rodape" href="#">Contato</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Contato</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-rodape" href="tel:4733183700">(47) 3318-3700</a></li>
+						<li><a class="link-rodape" href="https://goo.gl/maps/EtF2Se7tkYz1kcjS6">R. Adriano Kormann, 510 - Bela Vista, Gaspar - SC</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Redes Sociais</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-rodape" href="#">Instagram</a></li>
+						<li><a class="link-rodape" href="#">Facebook</a></li>
+						<li><a class="link-rodape" href="#">YouTube</a></li>
+						<li><a class="link-rodape" href="#">Twitter</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

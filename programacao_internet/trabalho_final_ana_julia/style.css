@@ -13,3 +13,46 @@
 header {
 	margin-bottom: 100px;
 }
+
+.titulo-servico{
+	color:#252c41;
+	margin-bottom: 40px;
+}
+
+.tamanho-icone{
+	color:#f06292;
+	font-size: 68px;
+}
+
+.servicos {
+	background-color: #E6E6FA;
+	margin-bottom: 0rem; /* Tirando o espaço em branco q fica abaixo;*/
+	border-radius: 0rem; /* Tirando o arredondamento das bordas q é padrão */
+}
+
+.titulo-depoimento{
+	color:#fff;
+	margin-bottom: 40px;
+}
+
+.depoimento {
+	background-color: #194089;
+	margin-bottom: 0rem; /* Tirando o espaço em branco q fica abaixo;*/
+	border-radius: 0rem; /* Tirando o arredondamento das bordas q é padrão */
+}
+
+.desc-depoimento{
+	margin-bottom: 40px;
+	color: #fff;
+}
+
+.rodape{
+	background-color: #252c41;
+	margin-bottom: 0rem;
+	border-radius:0rem;
+	color: #fff;
+}
+
+.rodape ul li a.link-rodape{
+	color:#fff;
+}
