@@ -13,8 +13,7 @@ class ClienteControlador extends Controller
      */
 
     private $alunos = [
-        ['id'=>1, 'nome'=>'Julia'],
-        ['id'=>2, 'nome'=>'Abel'],
+        ['id'=>1, 'nome'=>'Julia', 'idade'=>'20', 'curso'=>'ADS', 'email'=>'julia@gmail.com']
     ];
 
 
@@ -57,7 +56,14 @@ class ClienteControlador extends Controller
         $alunos = session('alunos');
         $id = end($alunos)['id']+1;
         $nome = $request->nome;
-        $dados = ["id" =>$id, "nome"=>$nome];
+        $idade = $request->idade;
+        $curso = $request->curso;
+        $email = $request->email;
+        $dados = ["id" =>$id, 
+            "nome"=>$nome,
+            "idade"=>$idade,
+            "curso"=>$curso,
+            "email"=>$email];
         $alunos[] = $dados;
         // $this->alunos[] = $dados;
 
@@ -109,6 +115,9 @@ class ClienteControlador extends Controller
         // $alunos[$id-1]['nome']=$request->nome;
         $index = $this->getIndex($id, $alunos);
         $alunos[$index]['nome']=$request->nome;
+        $alunos[$index]['idade']=$request->idade;
+        $alunos[$index]['curso']=$request->curso;
+        $alunos[$index]['email']=$request->email;
         session(['alunos'=>$alunos]);
         return redirect()->route('alunos.index');
     }

@@ -5,9 +5,9 @@
         <form action="{{ route('alunos.store') }}" method="post">
         @csrf
         <br>Nome: <input type='text' name="nome"></br>
-        <br>Idade: <input type='text' idade="idade"></br>
-        <!-- <br>Curso: <input type='text' name="curso"></br>
-        <br>Email: <input type='text' email="email"></br> -->
+        <br>Idade: <input type='text' name="idade"></br>
+        <br>Curso: <input type='text' name="curso"></br>
+        <br>Email: <input type='text' name="email"></br>
 
         <input type='submit' value="Salvar">
         
