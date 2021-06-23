@@ -32,6 +32,19 @@ Route::get('opcional/{parametro?}', function ($parametro=null) {
     echo "usuario nao informou parametro";
 });
 
+
+Route::get('obrigatorio/{parametro}', function ($parametro) {
+    echo "Parametro: ".$parametro;
+});
+
+
+Route::get('opcional/{parametro?}', function ($parametro=null) {
+    if (isset ($parametro))
+        echo "Parametro: ".$parametro;
+    else
+    echo "usuario nao informou parametro";
+});
+
 Route::prefix('/aplicacao')->Group(function(){
 
     Route::get('/', function(){
